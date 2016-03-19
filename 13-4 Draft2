@@ -1,0 +1,42 @@
+import java.util.*; 
+import java.util.Scanner; 
+
+public class Calendar{ 
+	public static void main(String[] args){ 
+		
+		int y = 0; 
+		int m = 0; 
+		int d = 0;
+		 
+		GregorianCalendar c = new GregorianCalendar(); 
+		Scanner input = new Scanner(System.in); 
+		 
+		System.out.print("Valid from January 1970.\n");
+		System.out.print("Month: "); 
+		m = input.nextInt(); 
+		System.out.print("Year: "); 
+		y = input.nextInt(); 
+		 
+		y = c.get(GregorianCalendar.YEAR); 
+		m = c.get(GregorianCalendar.MONTH);
+		d = c.get(GregorianCalendar.DATE);
+		
+		String monthName = "January";
+
+		if(m ==0 ) monthName = "January"; 
+		else if(m == 1) monthName = "February"; 
+		else if(m == 2) monthName = "March"; 
+		else if(m == 3)	monthName = "April"; 
+		else if(m == 4) monthName = "May"; 
+		else if(m == 5) monthName = "June"; 
+		else if(m == 6)	monthName = "July"; 
+		else if(m == 7)	monthName = "August"; 
+		else if(m == 8)	monthName = "September"; 
+		else if(m == 9) monthName = "October"; 
+		else if(m == 10) monthName = "November"; 
+		else if(m == 11) monthName = "December";  
+
+		System.out.println("Current time: " +monthName+" "+ c.get(GregorianCalendar.DATE) +","+ c.get(GregorianCalendar.YEAR)); 
+						 
+	} 
+}
